@@ -1,0 +1,51 @@
+body {
+  font-family: 'Slabo 27px', serif;
+}
+
+.group-tick line {
+  stroke: #555;
+}
+
+.group-tick text{
+	font-size:10px;
+}
+
+.ribbons {
+  fill-opacity: 0.1;
+  stroke-width:0.01em;
+}
+
+.label{
+	font-size:12px;
+}
+
+
+#content{
+	float:left;
+}
+
+aside{
+	float:right;
+	width:300px;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+}
+
+#wrapper{
+	width:1000px;
+	margin:20px auto;
+}
+
+.clearfix:after{
+  display:block;
+  content:"";
+  clear:both;
+}
+
+footer{
+  font-size:12px;
+  margin:20px 0;
+}
