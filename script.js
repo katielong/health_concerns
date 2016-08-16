@@ -110,25 +110,26 @@ d3.csv("data.csv", function(d){
 //mouseover
 		group.on("mouseover", function(d){
 			d3.selectAll(".ribbons")
+			  .selectAll("path")
 			  .style("stroke-width","0")
-			  .style("fill-opacity","0");
-
+			  .style("fill-opacity",0);			
+			
 			d3.selectAll(".ribbons")
 				.selectAll(".group"+d.index)
 				.style("stroke-width", "0.03em")
-				.transition()
-				.style("fill-opacity", "1");				
-			})
-		.on("mouseout", function(d){
+				.transition()				
+				.style("fill-opacity", 1);
+		}).on("mouseout", function(d){
 			d3.selectAll(".ribbons")
+				.selectAll("path")
 				.style("stroke-width","0.01em")				
-				.style("fill-opacity", "0.1");			
+				.style("fill-opacity", 0.1);			
 
 			d3.selectAll(".ribbons")
-				.selectAll(".group"+d.index)
+				.selectAll(".group"+d.index)	
 				.style("stroke-width", "0.01em")
 				.transition()				
-				.style("fill-opacity", "0.1");
+				.style("fill-opacity", 0.1);
 		});
 
 //function
