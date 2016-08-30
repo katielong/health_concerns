@@ -6,10 +6,9 @@ var margin={top:5, right:10, bottom:5, left:10},
 	outerRadius = innerRadius * 1.06;
 
 
-var Names = ["alzheimer", "arthritis", "asthma", "blood sugar", "body pain", "cancer",
-			"cardiovascular", "cholesterol", "coronavirus", "diabetes", "hepatitis",
-			"HIV-STD", "leukemia", "lupus", "mental health", "obesity", "others",
-			"thyroid", "tuberculosis", "vision"];
+var Names = ["Alzheimer","Arthritis","Asthma","Blood Sugar","Body Pain","Cancer","Cardiovascular",
+			"Cholesterol","Coronavirus","Diabetes","Headache","Hepatitis","HIV-STD","Leukemia",
+			"Lupus","Mental Health","Obesity","Others","Thyroid","Tuberculosis"];
 
 var svg = d3.select("#content")
 			.append("svg")
@@ -37,9 +36,9 @@ d3.csv("data.csv", function(d){
 	var matrix = d.map(function(d){
 		return [+d.Alzheimer, +d.Arthritis, +d.Asthma, +d['Blood Sugar'],
 		+d['Body Pain'], +d.Cancer, +d.Cardiovascular, +d.Cholesterol, 
-		+d.Coronavirus, +d.Diabetes, +d.Hepatitis, +d['HIV-STD'],
+		+d.Coronavirus, +d.Diabetes, +d.Headache, +d.Hepatitis, +d['HIV-STD'],
 	    +d.Leukemia, +d.Lupus, +d['Mental Health'], +d.Obesity,  
-		+d.Others, +d['Thyroid Problems'], +d.Tuberculosis, +d['Vision Problems']];
+		+d.Others, +d['Thyroid Problems'], +d.Tuberculosis];
 	});
 
 	var g = svg.append("g")
@@ -54,7 +53,6 @@ d3.csv("data.csv", function(d){
 				 .append("g");
 
 		group.append("path")
-			 // .style("stroke", function(d){return color(d.index);})
 			 .style("fill", function(d){return color(d.index);})
 			 .attr("d", arc)
 			 .attr("class", function(d){return ("group"+d.index);});
@@ -65,14 +63,12 @@ d3.csv("data.csv", function(d){
 			.text(function(d,i){return Names[i];})
 			.attr("transform", function(d){
 				var angle = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2,
-				 	distance = outerRadius + 40;
+				 	distance = outerRadius + 25;
 				if (angle <= Math.PI/2 & angle >= -Math.PI/2){
-					return "rotate("+ angle*180/Math.PI + ") translate (" + distance + ",0)";}
+					return "rotate("+ angle*180/Math.PI + ") translate (" + (distance) + ",0)";}
 				else{
-					return "rotate("+ (angle-Math.PI)*180/Math.PI + ") translate (-" + (distance+40) + ",0)";}
+					return "rotate("+ (angle-Math.PI)*180/Math.PI + ") translate (-" + (distance+50) + ",0)";}
 			});
-
-
 
 // ticks
 	 var groupTick = group.selectAll(".group-tick")
@@ -119,6 +115,7 @@ d3.csv("data.csv", function(d){
 				.style("stroke-width", "0.03em")
 				.transition()				
 				.style("fill-opacity", 1);
+
 		}).on("mouseout", function(d){
 			d3.selectAll(".ribbons")
 				.selectAll("path")
@@ -130,6 +127,7 @@ d3.csv("data.csv", function(d){
 				.style("stroke-width", "0.01em")
 				.transition()				
 				.style("fill-opacity", 0.1);
+				
 		});
 
 //function
