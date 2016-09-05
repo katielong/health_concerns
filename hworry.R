@@ -126,7 +126,6 @@ grouping <- function(var){
            c('Intestines', 'Crones Disease')='Intestinal Problems';
            c('By Pass Stomach', 'Stomach Ache', 'Stomach Pain', 'Stomaches Aches', 'Gastritis', 'Stomach',
            'Stomach Ulcer', 'Stomach Ulcers', 'Ulcers', 'Ulcer a', 'Ulcer', 'Ulster', 'Ulster')='Stomach Problems';
-           'Loss Of Hearing'='Hearing Problems';
            c('Eye Sight','Losing Sight', 'Blindness', 'Vista', 'Glaucoma', 'Vision', 'Eye Problems', 
            'Eye Subproblems', 'Eyesight', 'Cetera', 'Cataracts', 'Ci ego')='Vision Problems';
            c('Kidney Des ease', 'Kidney Disease', 'Kidney Stones', 'Kidneys', 'Kidney Failure', 'Los Crinolines', 'Crinolines',
@@ -138,6 +137,16 @@ grouping <- function(var){
            'Pancreas'='Pancreas Problems';
            c('Appendicitis', 'Appendix')='Appendix Problems';
            c('Colitis', 'Colon')='Colon Problems';
+           c('Inserion', 'Infection Leading To Amputation')='Infection';
+           c('Corona', 'Statue De Crona')='Coronavirus';
+           c('Ester odes', 'Steroids')='Steroid';
+           c('High Fever', 'Rheumatic Fever', 'Firebreak Tito fortitudes', 'Firebreak Rheumatic a')='Fever';
+           'Lu pas'='Lupus';
+           c('P re-eclamsia', 'Precambrian')='Pre-eclampsia';
+           c('Vesicular gall Bladder', 'Vesiular')='Gallbladder';
+           c('Distrait Muscular','Muscular Ache', 'Muscle Fatigue')='Muscle Problem';
+            
+           'Loss Of Hearing'='Hearing Problems';
            'Acidosis'='Sarcoidosis';
            'Mb p'='MBP';
            'Leora'='Leprosy';
@@ -145,24 +154,16 @@ grouping <- function(var){
            'Cele bro' = 'Cerebrovascular Disease';
            'Varistor'='Chicken Pox';
            'Lead Passioning'='Lead Poisoning';
-           c('Inserion', 'Infection Leading To Amputation')='Infection';
            'Gripe'='Flu';
            'Epilepsy'='Seizure';
            'Hemorrhoids'='Hemorrhoid';
            'Epileptic'='Epilepsy';
-           c('Corona', 'Statue De Crona')='Coronavirus';
            'Migraines'='Migraine';
            'Diatonic'='Dystonia';
-           c('Ester odes', 'Steroids')='Steroid';
-           c('High Fever', 'Rheumatic Fever', 'Firebreak Tito fortitudes', 'Firebreak Rheumatic a')='Fever';
-           'Lu pas'='Lupus';
-           c('P re-eclamsia', 'Precambrian')='Pre-eclampsia';
-           c('Vesicular gall Bladder', 'Vesiular')='Gallbladder';
            'Cloris'='Anemia';
            'Hearing'='Hearing Problems';
            'Viral'='Virus';
            'Chronic Diarrhea'='Diarrhea';
-           c('Distrait Muscular','Muscular Ache', 'Muscle Fatigue')='Muscle Problem';
            'Hernias'='Hernia';
            'Quipster'='Cyst';
            'Fungus'='Fungal Infection';
