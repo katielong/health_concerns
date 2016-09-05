@@ -1,51 +1,50 @@
 body {
-  font-family: 'Slabo 27px', serif;
+    font-family: 'Slabo 27px', serif;
 }
 
 .group-tick line {
-  stroke: #555;
+    stroke: #555;
 }
 
-.group-tick text{
-	font-size:10px;
+.group-tick text {
+    font-size: 10px;
 }
 
 .ribbons {
-  fill-opacity: 0.1;
-  stroke-width:0.01em;
+    fill-opacity: 0.1;
+    stroke-width: 0.01em;
 }
 
-.label{
-	font-size:12px;
+.label {
+    font-size: 12px;
 }
 
-
-#content{
-	float:left;
+#content {
+    float: left;
 }
 
-aside{
-	float:right;
-	width:300px;
+aside {
+    float: right;
+    width: 300px;
 }
 
-a{
-	text-decoration: none;
-	color:#000;
+a {
+    text-decoration: none;
+    color: #000;
 }
 
-#wrapper{
-	width:1000px;
-	margin:20px auto;
+#wrapper {
+    width: 1000px;
+    margin: 20px auto;
 }
 
-.clearfix:after{
-  display:block;
-  content:"";
-  clear:both;
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
-footer{
-  font-size:12px;
-  margin:20px 0;
+footer {
+    font-size: 12px;
+    margin: 20px 0;
 }
